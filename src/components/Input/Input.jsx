@@ -6,10 +6,9 @@ const Input = () => {
   return (
     <form>
 
-      <input
-        className="input"
-        type="text"
-      ></input>
+      <textarea
+        rows="1"
+      ></textarea>
 
       <button type="submit"
       ></button>
