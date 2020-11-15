@@ -4,7 +4,17 @@ import "./Input.css";
 
 const Input = () => {
   return (
-    <div className="input"></div>
+    <form>
+
+      <input
+        className="input"
+        type="text"
+      ></input>
+
+      <button type="submit"
+      ></button>
+
+    </form>
   );
 };
 
