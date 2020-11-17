@@ -1,28 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Halant:wght@600;700&display=swap');
-
-textarea {
-  /*size and position*/
+.input {
+  /* Position */
   position: absolute;
   bottom: 0px;
-  resize: none;
-  width: calc(100% - 208px);
-  max-height: 102px;
   margin: 30px 40px 40px 40px;
-  padding: 10px 96px 10px 32px;
-  line-height: 1;
 
-  /*look*/
+  /* Size */
+  width: calc(100% - 80px);
+  max-height: 122px;
+  min-height: 54px;
+
+  /* View */
   background: #F3F3F3;
   border-radius: 32px;
-  border: none;
-  outline: none;
-  font-family: Halant;
-  font-size: 34px;
 }
 
 @media (max-width:700px) {
-  textarea {
-    width: calc(100% - 96px);
+  .input {
+    width: 100%;
     border-radius: 0;
     margin: 0;
   }
