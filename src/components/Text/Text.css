@@ -2,7 +2,7 @@
 
 textarea {
   /* Position */
-  padding: 10px 32px;
+  padding: 10px 28px;
 
   /* Size */
   resize: none;
@@ -13,8 +13,7 @@ textarea {
   border: none;
   border-radius: 32px;
   outline: none;
-  background: green;
-  /*background: #F3F3F3;*/
+  background: #F3F3F3;
 
   /* Text */
   font-family: Halant;
