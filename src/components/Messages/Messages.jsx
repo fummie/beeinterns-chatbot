@@ -6,11 +6,10 @@ import "./Messages.css";
 
 const Messages = ({ messages }) => {
 
-  const list = messages.map((message) => {
-    const { id, ...other } = message;
+  const list = messages.map((message, index) => {
     return (
-      <li key={id}>
-        <Message { ...other }/>
+      <li key={index}>
+        <Message { ...message }/>
       </li>
     )
   });

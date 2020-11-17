@@ -1,4 +1,4 @@
-import React, { useState, useReducer }  from "react";
+import React, { useReducer }  from "react";
 
 import Messages from "../Messages";
 import Input from "../Input";
@@ -27,7 +27,6 @@ const addMessageAction = (message) => ({
 
 const Chat = () => {
   const [messages, messagesDispatch] = useReducer(messagesReducer, []);
-  const [id, setId] = useState(0);
 
   const addMessage = (author = "", text) => {
     console.log(`addMessage: [ author: ${author} text: ${text}`);
@@ -45,10 +44,7 @@ const Chat = () => {
   };
 
   const createMessage = (author, text) => {
-    const savedId = id;
-    setId(id + 1);
     return {
-      id: savedId,
       author,
       text
     };
