@@ -1,0 +1,23 @@
+form {
+  /* Position */
+  margin: 30px 40px 40px 40px;
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+
+  /* Size */
+  max-height: 122px;
+  min-height: 54px;
+
+  /* View */
+  background: #F3F3F3;
+  border-radius: 32px;
+}
+
+@media (max-width:500px) {
+  form {
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+  }
+}

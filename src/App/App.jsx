@@ -1,14 +1,10 @@
 import React from "react";
 
-import Chat from "../components/Chat";
-
-import './App.css';
+import Container from "../components/Container";
 
 const App = () => {
     return (
-        <>
-          <Chat/>
-        </>
+      <Container/>
     );
 };
 

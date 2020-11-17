@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Halant:wght@600;700&display=swap');
+
+textarea {
+  /* Position */
+  padding: 10px 32px;
+
+  /* Size */
+  resize: none;
+  flex-grow: 1;
+  max-height: 102px;
+
+  /* View */
+  border: none;
+  border-radius: 32px;
+  outline: none;
+  background: green;
+  /*background: #F3F3F3;*/
+
+  /* Text */
+  font-family: Halant;
+  font-size: 34px;
+  line-height: 1;
+}
+
+  @media (max-width:500px) {
+    textarea {
+      /*Position*/
+      padding-left: 16px;
+      padding-right: 16px;
+
+      /* Size */
+      border-radius: 0;
+      margin: 0;
+    }
+  }

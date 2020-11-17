@@ -1,0 +1,16 @@
+button {
+  /* Position */
+  margin: 0 32px 0 16px;
+  align-self: center;
+
+  /* Size */
+  min-width: 40px;
+  min-height: 40px;
+}
+
+@media (max-width:500px) {
+  button {
+    /* Position */
+    margin-right: 16px;
+  }
+}

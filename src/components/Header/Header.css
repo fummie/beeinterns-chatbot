@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Halant:wght@600;700&display=swap');
+
+.header {
+  height: 64px;
+  padding: 64px 15px 0 15px;
+}
+
+.header p {
+  font-family: 'Halant', serif;
+  font-size: 58px;
+  color: white;
+}
+
+@media (max-width:500px) {
+
+  .header {
+    height: 32px;
+    padding-top: 16px;
+  }
+
+  .header p {
+    font-size: 32px;
+  }
+
+}
