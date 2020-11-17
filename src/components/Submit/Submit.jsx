@@ -2,9 +2,12 @@ import React from "react";
 
 import "./Submit.css";
 
-const Submit = () => {
+const Submit = ({ onSubmit }) => {
   return (
-    <button></button>
+    <button
+      id="submit"
+      onClick={onSubmit}
+    ></button>
   );
 };
 

@@ -5,13 +5,18 @@ import Submit from "../Submit";
 
 import "./Input.css";
 
-const Input = () => {
-  
+const Input = ({ addMessage }) => {
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+    const textarea = document.getElementById("textarea");
+    addMessage("Fummie", textarea.value);
+  };
 
   return (
     <form>
         <Text/>
-        <Submit/>
+        <Submit onSubmit={onSubmit}/>
     </form>
   );
 
