@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Text.css";
 
-const Text = () => {
+const Text = ({ setReady }) => {
 
   const resize = () => {
     const textarea = document.getElementById("textarea");
@@ -18,17 +18,25 @@ const Text = () => {
 
   const getScrollHeight = (textarea) => {
     var savedValue = textarea.value;
-    textarea.value = '';
+    textarea.value = "";
     textarea.baseScrollHeight = textarea.scrollHeight;
     textarea.value = savedValue;
   };
+
+  const checkReady = () => {
+    const textarea = document.getElementById("textarea");
+    setReady(textarea.value !==  "");
+  };
+
+//TODO Why OnKeyPress does not work?
 
   return (
     <textarea
       id="textarea"
       min-rows="1"
       rows="1"
-      onKeyUp={resize}
+      onKeyDown={() => {resize(); checkReady()}}
+      onKeyUp={() => {resize(); checkReady()}}
     ></textarea>
   );
 
