@@ -25,10 +25,10 @@ const Text = () => {
 
   return (
     <textarea
-    id="textarea"
-    min-rows="1"
-    rows="1"
-    onKeyUp={resize}
+      id="textarea"
+      min-rows="1"
+      rows="1"
+      onKeyUp={resize}
     ></textarea>
   );
 
