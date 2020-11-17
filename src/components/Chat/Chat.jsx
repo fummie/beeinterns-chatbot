@@ -5,25 +5,29 @@ import Input from "../Input";
 
 import "./Chat.css";
 
+//----------------------------------------------------------------------------------------------------------------------
+
 const ADD_MESSAGE = "ADD_MESSAGE";
 
 const messagesReducer = (messages, messagesAction) => {
   switch (messagesAction.type) {
     case ADD_MESSAGE:
-      return [...messages, messagesAction.item];
+      return [...messages, messagesAction.message];
     default:
       return messages;
   };
 };
 
-const addMessageAction = (item) => ({
+const addMessageAction = (message) => ({
   type: ADD_MESSAGE,
-  item
+  message
 });
 
+//----------------------------------------------------------------------------------------------------------------------
+
 const Chat = () => {
-  const [id, setId] = useState(0);
   const [messages, messagesDispatch] = useReducer(messagesReducer, []);
+  const [id, setId] = useState(0);
 
   const addMessage = (author = "", text) => {
     console.log(`addMessage: [ author: ${author} text: ${text}`);
