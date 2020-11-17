@@ -6,6 +6,7 @@ textarea {
 
   /* Size */
   resize: none;
+  flex-grow: 1;
   max-height: 102px;
 
   /* View */
