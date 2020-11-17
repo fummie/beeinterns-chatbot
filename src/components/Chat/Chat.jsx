@@ -1,20 +1,34 @@
-import React, { useState }  from "react";
+import React, { useState, useReducer }  from "react";
 
 import Messages from "../Messages";
 import Input from "../Input";
 
 import "./Chat.css";
 
+const ADD_MESSAGE = "ADD_MESSAGE";
+
+const messagesReducer = (messages, messagesAction) => {
+  switch (messagesAction.type) {
+    case ADD_MESSAGE:
+      return [...messages, messagesAction.item];
+    default:
+      return messages;
+  };
+};
+
+const addMessageAction = (item) => ({
+  type: ADD_MESSAGE,
+  item
+});
+
 const Chat = () => {
   const [id, setId] = useState(0);
-  const [messages, setMessages] = useState([]);
+  const [messages, messagesDispatch] = useReducer(messagesReducer, []);
 
-  const addMessage = (author, text) => {
+  const addMessage = (author = "", text) => {
     console.log(`addMessage: [ author: ${author} text: ${text}`);
     const message = createMessage(author, text);
-    const newMessages = messages;
-    newMessages.push(message);
-    setMessages(newMessages);
+    messagesDispatch(addMessageAction(message));
 
     if (author !== "Bot")
       addRespond(message);
@@ -39,7 +53,7 @@ const Chat = () => {
   return (
     <div className="chat">
       <Messages messages={messages}/>
-      <Input/>
+      <Input addMessage={addMessage}/>
     </div>
   );
 };
