@@ -6,13 +6,13 @@ import Submit from "../Submit";
 import "./Input.css";
 
 const Input = () => {
-  return (
-    <div className="input">
+  
 
+  return (
+    <form>
         <Text/>
         <Submit/>
-
-    </div>
+    </form>
   );
 
 };
