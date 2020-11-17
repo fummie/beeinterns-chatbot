@@ -10,20 +10,20 @@ const Chat = () => {
   const [messages, setMessages] = useState([]);
 
   const addMessage = (author, text) => {
+    console.log(`addMessage: [ author: ${author} text: ${text}`);
     const message = createMessage(author, text);
     const newMessages = messages;
     newMessages.push(message);
     setMessages(newMessages);
 
-    if (author != "Bot")
-      createRespond(message);
+    if (author !== "Bot")
+      addRespond(message);
   };
 
   const addRespond = (message) => {
     const author = "Bot";
     const text = "Your request is:" + message.text;
-    const message = createMessage(author, text);
-    addMessage(message);
+    addMessage(author, text);
   };
 
   const createMessage = (author, text) => {
@@ -38,10 +38,7 @@ const Chat = () => {
 
   return (
     <div className="chat">
-      <Messages
-        messages={messages}
-        addMessage={addMessage}
-      />
+      <Messages messages={messages}/>
       <Input/>
     </div>
   );

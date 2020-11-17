@@ -2,9 +2,12 @@ import React from "react";
 
 import "./Message.css";
 
-const Message = () => {
+const Message = ({ author, text }) => {
   return (
-    <div></div>
+    <span>
+      <p>Author: {author}</p>
+      <p>Text: {text}</p>
+    </span>
   );
 };
 
