@@ -1,3 +1,26 @@
+.message {
+  display: flex;
+  flex-direction: row;
+}
+
+.icon {
+  /* Position */
+  align-self: flex-start;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+
+  /* Size */
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+
+  /* View */
+  background-color: #F1F0F0;
+}
+
 .bot {
   background: #F9C35B
 }

@@ -19,7 +19,7 @@ const Message = ({ author, text }) => {
   };
 
   return (
-    <div>
+    <div className="message">
       <div className="icon">
         <img src={icon} alt=""></img>
       </div>
