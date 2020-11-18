@@ -12,7 +12,7 @@ const Text = ({ setReady }) => {
       getScrollHeight(textarea);
 
     textarea.rows = minRows;
-    rows = Math.ceil((textarea.scrollHeight - textarea.baseScrollHeight) / 34);
+    rows = Math.ceil((textarea.scrollHeight - textarea.baseScrollHeight) / 35);
     textarea.rows = minRows + rows;
   };
 
