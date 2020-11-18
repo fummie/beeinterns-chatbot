@@ -1,4 +1,4 @@
-.messages {
+ul {
   /*Position*/
   padding: 0 40px;
   display: flex;
@@ -6,4 +6,8 @@
 
   /* Size */
   flex-grow: 1;
+  resize: none;
+
+  /*View*/
+  overflow: hidden;
 }
