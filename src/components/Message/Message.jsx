@@ -8,13 +8,13 @@ import userSVG from "../../data/user.svg";
 const Message = ({ author, text }) => {
 
   let icon = null;
-  let bubble = null;
+  let bubble = "text";
 
   if (author === "Bot") {
-    bubble = "bot";
+    bubble += " bot";
     icon = botSVG;
   } else {
-    bubble = "user";
+    bubble += " user";
     icon = userSVG;
   };
 
