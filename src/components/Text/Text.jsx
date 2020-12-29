@@ -5,7 +5,7 @@ import "./Text.css";
 const Text = ({ setReady }) => {
 
   const resize = () => {
-    const textarea = document.getElementById("textarea");
+    const textarea = document.getElementById("text-input");
     var minRows = textarea.getAttribute("min-rows")|0, rows;
 
     if (!textarea.baseScrollHeight)
@@ -32,7 +32,8 @@ const Text = ({ setReady }) => {
 
   return (
     <textarea
-      id="textarea"
+      className="text-input"
+      id="text-input"
       min-rows="1"
       rows="1"
       onKeyDown={() => {resize(); checkReady()}}

@@ -24,18 +24,21 @@
   background-color: #F1F0F0;
 }
 
-.text {
+.text-bubble {
   /* Position */
   padding: 10px 28px;
   margin-left: 10px;
+  flex-grow: 0;
+  align-self: flex-start;
 
-  /* Size */
-  min-height: 55px;
+  /*Size*/
+  resize: none;
 
   /* View */
   border-radius: 35px;
 
   /*Text*/
+  font-family: Halant;
   font-size: 35px;
   line-height: 1;
 }

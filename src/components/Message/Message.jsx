@@ -8,14 +8,33 @@ import userSVG from "../../data/user.svg";
 const Message = ({ author, text }) => {
 
   let icon = null;
-  let bubble = "text";
+  let textBubble = "text-bubble";
 
   if (author === "Bot") {
-    bubble += " bot";
+    textBubble += " bot";
     icon = botSVG;
   } else {
-    bubble += " user";
+    textBubble += " user";
     icon = userSVG;
+  };
+
+  const set Size = () => {
+    const textarea = document.getElementById("text-bubble");
+    var minRows = textarea.getAttribute("min-rows")|0, rows;
+
+    if (!textarea.baseScrollHeight)
+      getScrollHeight(textarea);
+
+    textarea.rows = minRows;
+    rows = Math.ceil((textarea.scrollHeight - textarea.baseScrollHeight) / 35);
+    textarea.rows = minRows + rows;
+  };
+
+  const getScrollHeight = (textarea) => {
+    var savedValue = textarea.value;
+    textarea.value = "";
+    textarea.baseScrollHeight = textarea.scrollHeight;
+    textarea.value = savedValue;
   };
 
   return (
@@ -23,9 +42,13 @@ const Message = ({ author, text }) => {
       <div className="icon">
         <img src={icon} alt=""></img>
       </div>
-      <div className={bubble}>
-        <p>{text}</p>
-      </div>
+      <textarea
+        className={textBubble}
+        id="text-bubble"
+        readOnly
+        value={text}
+        onLoad={setSize}
+      ></textarea>
     </div>
   );
 
