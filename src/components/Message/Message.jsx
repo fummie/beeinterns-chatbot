@@ -18,7 +18,7 @@ const Message = ({ author, text }) => {
     icon = userSVG;
   };
 
-  const set Size = () => {
+  const setSize = () => {
     const textarea = document.getElementById("text-bubble");
     var minRows = textarea.getAttribute("min-rows")|0, rows;
 

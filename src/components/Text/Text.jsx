@@ -24,7 +24,7 @@ const Text = ({ setReady }) => {
   };
 
   const checkReady = () => {
-    const textarea = document.getElementById("textarea");
+    const textarea = document.getElementById("text-input");
     setReady(textarea.value !==  "");
   };
 
