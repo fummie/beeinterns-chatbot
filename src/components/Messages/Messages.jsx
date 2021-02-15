@@ -6,13 +6,13 @@ import "./Messages.css";
 
 const Messages = ({ messages }) => {
 
-  const list = messages.slice(0).reverse().map((message, index) => {
-    return (
-      <li key={index}>
-        <Message { ...message }/>
-      </li>
+  const list = [];
+  for (var index = messages.length - 1; index >= 0; index--)
+    list.push(
+      (<li key={index}>
+          <Message { ...messages[index] }/>
+        </li>)
     )
-  });
 
   return (
     <ul className="message-list">
