@@ -1,6 +1,7 @@
 ul {
   /*Position*/
-  padding: 0 40px;
+  margin: 0 30px;
+  padding: 0 15px;
   display: flex;
   flex-direction: column-reverse;
 
@@ -9,5 +10,5 @@ ul {
   resize: none;
 
   /*View*/
-  overflow: hidden;
+  overflow: auto;
 }
