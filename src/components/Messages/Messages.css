@@ -1,7 +1,6 @@
-ul {
+.message-list {
   /*Position*/
-  margin: 0 30px;
-  padding: 0 15px;
+  padding: 0 40px;
   display: flex;
   flex-direction: column-reverse;
 
@@ -11,4 +10,8 @@ ul {
 
   /*View*/
   overflow: auto;
+}
+
+.message-list::-webkit-scrollbar {
+  display: none;
 }
