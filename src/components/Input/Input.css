@@ -8,6 +8,7 @@ form {
   /* Size */
   max-height: 122px;
   min-height: 54px;
+  flex-shrink: 0;
 
   /* View */
   background: #F3F3F3;
