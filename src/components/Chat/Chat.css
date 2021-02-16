@@ -1,0 +1,28 @@
+.chat {
+  /* Position */
+  margin: 40px 15px 100px 15px;
+  display: flex;
+  flex-direction: column;
+
+  /* Size */
+  flex-grow: 1;
+  min-height: 200px;
+
+  /* View */
+  border: 2px solid #EDEDED;
+  border-radius: 37.5px;
+}
+
+@media (max-width:500px) {
+  .chat {
+    /* Position */
+    margin: 20px 0 0 0;
+
+    /* Size */
+    width: 100%;
+    height: calc(100vh - 62px);
+
+    /* View */
+    border: none;
+  }
+}

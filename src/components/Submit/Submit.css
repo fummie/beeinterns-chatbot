@@ -1,0 +1,22 @@
+button {
+  /* Position */
+  margin: 0 28px 0 16px;
+  padding: 0;
+  align-self: center;
+
+  /* Size */
+  width: 40px;
+  height: 40px;
+  resize: none;
+
+  /* View */
+  border: none;
+  outline: none;
+}
+
+@media (max-width:500px) {
+  button {
+    /* Position */
+    margin-right: 16px;
+  }
+}

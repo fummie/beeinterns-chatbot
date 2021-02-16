@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Halant:wght@500&display=swap");
+
+.text-input {
+  /* Position */
+  padding: 10px 28px;
+
+  /* Size */
+  resize: none;
+  flex-grow: 1;
+  max-height: 102px;
+
+  /* View */
+  border: none;
+  border-radius: 32px;
+  outline: none;
+  background: #F3F3F3;
+
+  /* Text */
+  font-family: Halant;
+  font-size: 35px;
+  line-height: 1;
+}
+
+  @media (max-width:500px) {
+    .text-input {
+      /*Position*/
+      padding-left: 16px;
+      padding-right: 16px;
+
+      /* Size */
+      border-radius: 0;
+      margin: 0;
+    }
+  }
