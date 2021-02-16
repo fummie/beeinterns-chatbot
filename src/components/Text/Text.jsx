@@ -5,14 +5,14 @@ import "./Text.css";
 const Text = ({ setReady }) => {
 
   const resize = () => {
-    const textarea = document.getElementById("textarea");
+    const textarea = document.getElementById("text-input");
     var minRows = textarea.getAttribute("min-rows")|0, rows;
 
     if (!textarea.baseScrollHeight)
       getScrollHeight(textarea);
 
     textarea.rows = minRows;
-    rows = Math.ceil((textarea.scrollHeight - textarea.baseScrollHeight) / 34);
+    rows = Math.ceil((textarea.scrollHeight - textarea.baseScrollHeight) / 35);
     textarea.rows = minRows + rows;
   };
 
@@ -24,7 +24,7 @@ const Text = ({ setReady }) => {
   };
 
   const checkReady = () => {
-    const textarea = document.getElementById("textarea");
+    const textarea = document.getElementById("text-input");
     setReady(textarea.value !==  "");
   };
 
@@ -32,7 +32,8 @@ const Text = ({ setReady }) => {
 
   return (
     <textarea
-      id="textarea"
+      className="text-input"
+      id="text-input"
       min-rows="1"
       rows="1"
       onKeyDown={() => {resize(); checkReady()}}

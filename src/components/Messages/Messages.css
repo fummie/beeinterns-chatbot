@@ -1,4 +1,17 @@
-.messages {
+.message-list {
+  /*Position*/
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column-reverse;
+
   /* Size */
   flex-grow: 1;
+  resize: none;
+
+  /*View*/
+  overflow: auto;
+}
+
+.message-list::-webkit-scrollbar {
+  display: none;
 }

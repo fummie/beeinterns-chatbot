@@ -13,7 +13,7 @@ const Input = ({ addMessage }) => {
 
     event.preventDefault();
 
-    const text = document.getElementById("textarea").value;
+    const text = document.getElementById("text-input").value;
     const disabled = document.getElementById("submit-btn").disabled;
 
     if (!disabled)
