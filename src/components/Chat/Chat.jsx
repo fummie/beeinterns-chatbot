@@ -1,4 +1,4 @@
-import React, { useReducer }  from "react";
+import React, { useReducer, useEffect }  from "react";
 
 import Messages from "../Messages";
 import Input from "../Input";
@@ -28,8 +28,12 @@ const addMessageAction = (message) => ({
 const Chat = () => {
   const [messages, messagesDispatch] = useReducer(messagesReducer, []);
 
+  useEffect(() => {
+    const welcomeMessage = {author: "Bot", text: "Напиши /start"};
+    messagesDispatch(addMessageAction(welcomeMessage));
+  }, []);
+
   const addMessage = (author = "", text) => {
-    console.log(`addMessage: [ author: ${author} text: ${text}`);
     const message = createMessage(author, text);
     messagesDispatch(addMessageAction(message));
 
@@ -39,7 +43,17 @@ const Chat = () => {
 
   const addRespond = (message) => {
     const author = "Bot";
-    const text = "Your request is:" + message.text;
+    var text = "";
+
+    switch (message.text) {
+      case "/start":
+        text = "Привет, меня зовут Чат-бот, а как зовут тебя?";
+        break;
+      default:
+        text = "Я не понимаю, введите другую команду!";
+        break;
+    };
+
     addMessage(author, text);
   };
 
